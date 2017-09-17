@@ -1,0 +1,28 @@
+{% extends "admin/base_site_hu.html" %}
+{% load i18n static %}
+
+{% block extrastyle %}{{ block.super }}<link rel="stylesheet" type="text/css" href="{% static "admin/css/dashboard.css" %}" />{% endblock %}
+
+{% block coltype %}colMS{% endblock %}
+
+{% block bodyclass %}{{ block.super }} dashboard{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block content %}
+<div id="content-main">
+</div>
+{% endblock %}
+
+{% block sidebar %}
+<div id="content-related">
+    <div class="module" id="recent-actions-module">
+        <!--<h2>说明</h2>-->
+        <h3>云主机管理</h3>
+        <p>新创建的主机,30分钟后自动关机，可自定义关机时间。</p>
+        <p>已存在的主机，默认自动关机，可自定义关机时间。</p>
+        <p>自动关机后7天删除主机，可自定义删除时间。</p>
+        <p>目前支持华北区和华南区</p>
+    </div>
+</div>
+{% endblock %}
